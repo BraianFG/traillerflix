@@ -7,7 +7,7 @@ El proyecto es sobre una página de peliculas
 * NODE JS
 
 * NPM
-* 
+  
 * MYSQL WORKBENCH
 
 **PROGRAMAS DE NODE JS QUE HAY QUE INSTALAR**

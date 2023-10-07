@@ -1,4 +1,4 @@
-# TRAILLERFLIX UNTREF
+# TRAILERFLIX UNTREF
 
 El proyecto es sobre una página de peliculas 
 

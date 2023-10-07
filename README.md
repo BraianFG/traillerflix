@@ -3,14 +3,16 @@
 El proyecto es sobre una página de peliculas 
 
 ## Tener instalado previamente
+Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto hay que tener instalado para que funcione el proyecto
 * sequelize2
 
-* Express
+* express
 
-* Nodenom
+* nodenom
 
 * mysql2
 
+* dotenv
 
 ## Consulta a todo el catálogo
 

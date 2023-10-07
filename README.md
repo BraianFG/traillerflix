@@ -37,14 +37,14 @@ Esto permite ver todo el contenido de las peliculas en general
 * **http://localhost/categorias/**
 Esto permite ver todas las categorias de las películas que hay disponibles
 
+### Buscar por número o ID
+
+* **http://localhost/id/Número**
+Esto permite buscar peliculas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"
+
 ## Detalles del proyecto
 
 ### Diseño de la base de datos 
 
 ![image](https://github.com/BraianFG/traillerflix/assets/55467665/6c519566-f955-4600-a36c-615add073e35)
 
-
-### Buscar por número o ID
-
-* **http://localhost/id/Número**
-Esto permite buscar peliculas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"

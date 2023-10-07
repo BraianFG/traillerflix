@@ -31,8 +31,12 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 * **http://localhost/catalogo/**
 Esto permite ver todo el contenido de las peliculas en general
 
+### Consulta a toda las categorías disponibles
+
 * **http://localhost/categorias/**
 Esto permite ver todas las categorias de las películas que hay disponibles
+
+### Buscar por número o ID
 
 * **http://localhost/id/Número**
 Esto permite buscar peliculas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"

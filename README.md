@@ -23,6 +23,9 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 
 * dotenv
 
+## ANTES DE EJECUTAR EL PROGRAMA 
+Importe y ejecute tablas.sql en Mysql Workbench 
+
 ## ¿Cómo usar el programa? 
 
 Todo lo que se describa a continuación hay que hacerlo con petición GET en **POSTMAN** o **THUNDER CLIENT**

@@ -40,6 +40,7 @@ Esto permite ver todas las categorias de las películas que hay disponibles
 ## Detalles del proyecto
 
 ### Diseño de la base de datos 
+
 ![image](https://github.com/BraianFG/traillerflix/assets/55467665/6c519566-f955-4600-a36c-615add073e35)
 
 

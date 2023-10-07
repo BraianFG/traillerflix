@@ -23,8 +23,16 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 
 * dotenv
 
-## Consulta a todo el catálogo
+## ¿Cómo usar el programa? 
+### Consulta a todo el catálogo
 
 * Hay que hacer un get en **POSTMAN** o **THUNDER CLIENT**
   
 * **http://localhost/catalogo/**
+Esto permite ver todo el contenido de las peliculas en general
+
+* **http://localhost/categorias/**
+Esto permite ver todas las categorias de las películas que hay disponibles
+
+* **http://localhost/id/Número**
+Esto permite buscar peliculas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"

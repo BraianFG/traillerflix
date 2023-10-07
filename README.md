@@ -2,6 +2,15 @@
 
 El proyecto es sobre una página de peliculas 
 
+## Tener instalado previamente
+* sequelize2
+
+* Express
+
+* Nodenom
+
+* mysql2
+
 
 ## Consulta a todo el catálogo
 

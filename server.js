@@ -4,59 +4,60 @@ const categorias = require('./src/modelos/categorias');
 
 let express = require("express");
 let app = express();
-
-async function main() {
+/*------------------------------------------------------------------------------------------------------*/
+app.use(express.json());
+app.use(async (req, res, next) => {
   try {
     await sequelize.authenticate();
-    console.log('Conexión exitosa a la base de datos.');
-    await contenido.sync();
-    const allcontenidos = await contenido.findAll();
-    const allcontenidosData = allcontenidos.map(contenido => contenido.dataValues);
-    app.get("/catalogo", function (req, res) {
-      res.send(allcontenidosData);
-    });
-  } catch (error) {
-    console.error('Error al conectar o consultar la base de datos:', error);
-  } finally {
-    sequelize.close();
-  }
-
-}
-main();
-
-
-async function main2() {
-  try {
-    await sequelize.authenticate();
-    console.log('Conexión exitosa a la base de datos.');
     await categorias.sync();
-    const allcategorias = await categorias.findAll();
-    const allcategoriasData = allcategorias.map(categorias => categorias.dataValues);
-    app.get("/categorias", function (req, res) {
-      res.send(allcategoriasData);
-    });
+    await contenido.sync();
+    next();
   } catch (error) {
-    console.error('Error al conectar o consultar la base de datos:', error);
-  } finally {
-    sequelize.close();
+    res.status(500).json({ error: 'Error al conectarse al servidor', description: error.messagge });
   }
-}
-main2();
+})
+/*------------------------------------------------------------------------------------------------------*/
+app.get('/categorias', async (req, res) => {
+  try {
+    const allcategorias = await categorias.findAll();
+    allcategorias.length !== 0 ? res.status(200).json(allcategorias) : res.status(404).json({ error: "No se encontraron categorías" })
+  } catch (error) {
+    res.status(500).json({ error: "Error al conectarse al servidor", description: error.messagge })
+  }
+});
+/*------------------------------------------------------------------------------------------------------*/
+app.get('/catalogo', async (req, res) => {
+  try {
+    const allcontenidos = await contenido.findAll();
+    allcontenidos.length !== 0 ? res.status(200).json(allcontenidos) : res.status(404).json({ error: "No se encontraron peliculas" })
+  } catch (error) {
+    res.status(500).json({ error: "Error al conectarse al servidor", description: error.messagge })
+  }
+});
+/*------------------------------------------------------------------------------------------------------*/
+app.get('/catalogo/:catalogoid', async (req, res) => {
+  try {
+    const { catalogoid } = req.params;
+    const catalogo = await contenido.findByPk(catalogoid);
 
-async function main3() {
-  app.get("/catalogo/titulo:contnombre", async (req, res) => {
-    try {
-      const { nombre } = req.params;
-      const contnombre = await contenido.findOne({ where: { nombre } })
-      res.send(contnombre);
-    }
-    catch {
-
-    }
-  });
-}
-main3();
-
+    !catalogo ? res.status(404).json({error: "Película no encontrada"})
+    :res.status(200).json(catalogo)
+  } catch (error) {
+    res.status(500).json({error : "Película no encontrada",description : error.messagge}) 
+  }
+});
+/*------------------------------------------------------------------------------------------------------*/
+app.get('/catalogo/nombre/:nombre', async (req, res) => {
+  try {
+    const { catalogoNombre } = req.params;
+    const catalogonom = await contenido.findOne({ where: { catalogoNombre } });
+    !catalogo ? res.status(404).json({error: "Película no encontrada"})
+    :res.status(200).json(catalogonom)
+  } catch (error) {
+    res.status(500).json({error : "Película no encontrada",description : error.messagge}) 
+  }
+});
+/*------------------------------------------------------------------------------------------------------*/
 app.listen(3008, function () {
   console.log("Aplicación ejemplo, escuchando el puerto 3008!");
 });

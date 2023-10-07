@@ -25,7 +25,7 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 
 ## ¿Cómo usar el programa? 
 
-* Todo lo que se describa a continuación hay que hacerlo con petición GET en **POSTMAN** o **THUNDER CLIENT**
+Todo lo que se describa a continuación hay que hacerlo con petición GET en **POSTMAN** o **THUNDER CLIENT**
   
 ### Consulta a todo el catálogo
   

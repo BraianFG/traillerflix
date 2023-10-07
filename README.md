@@ -18,6 +18,6 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 
 ## Consulta a todo el catálogo
 
-* Hay que hacer un get en **POSTMAN** **THUNDER CLIENT**
+* Hay que hacer un get en **POSTMAN** o **THUNDER CLIENT**
   
 * **http://localhost/catalogo/**

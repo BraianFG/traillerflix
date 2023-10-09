@@ -43,8 +43,12 @@ Esto permite ver todas las categorias de las películas que hay disponibles
 ### Buscar por número o ID
 
 * **http://localhost/id/Número**
-Esto permite buscar peliculas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"
+Esto permite buscar películas por número o id, en donde dice **Número** hay que buscar el id que exista si no está va a saltar un mensaje de "Pelicula no encontrada"
 
+## Buscar por nombre
+
+* **http://localhost/titulo/titulo**
+Esto permite buscar películas por nombre,en donde dice **titulo** al final hay que remplazar por nombre 
 
 ## Detalles del proyecto
 

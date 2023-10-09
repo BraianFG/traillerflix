@@ -33,11 +33,13 @@ Todo lo que se describa a continuación hay que hacerlo con petición GET en **P
 ### Consulta a todo el catálogo
   
 * **http://localhost/catalogo/**
+  
 Esto permite ver todo el contenido de las peliculas en general
 
 ### Consulta a toda las categorías disponibles
 
 * **http://localhost/categorias/**
+  
 Esto permite ver todas las categorias de las películas que hay disponibles
 
 ### Buscar por número o ID

@@ -1,6 +1,6 @@
 # TRAILERFLIX UNTREF
 
-El proyecto es sobre una página de peliculas 
+El proyecto es sobre una página de peliculas hecho en conjunto por Braian Frediani Guelffi y Paola Gusmerotti
 
 ## Tener instalado previamente 
 

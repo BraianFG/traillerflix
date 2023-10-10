@@ -35,10 +35,10 @@ app.get('/catalogo', async (req, res) => {
   }
 });
 /*------------------------------------------------------------------------------------------------------*/
-app.get('/catalogo/:catalogoid', async (req, res) => {
+app.get('/catalogo/id/:id', async (req, res) => {
   try {
-    const { catalogoid } = req.params;
-    const catalogo = await contenido.findByPk(catalogoid);
+    const { id } = req.params;
+    const catalogo = await contenido.findByPk(id);
 
     !catalogo ? res.status(404).json({error: "Película no encontrada"})
     :res.status(200).json(catalogo)
@@ -47,16 +47,28 @@ app.get('/catalogo/:catalogoid', async (req, res) => {
   }
 });
 /*------------------------------------------------------------------------------------------------------*/
-app.get('/catalogo/nombre/:nombre', async (req, res) => {
+app.get('/catalogo/titulo/:titulo', async (req, res) => {
   try {
-    const { catalogoNombre } = req.params;
-    const catalogonom = await contenido.findOne({ where: { catalogoNombre } });
+    const { titulo } = req.params;
+    const catalogo = await contenido.findOne({ where: { titulo } });
     !catalogo ? res.status(404).json({error: "Película no encontrada"})
-    :res.status(200).json(catalogonom)
+    :res.status(200).json(catalogo)
   } catch (error) {
     res.status(500).json({error : "Película no encontrada",description : error.messagge}) 
   }
 });
+/*------------------------------------------------------------------------------------------------------*/
+/*app.get('/catalogo/genero/:genero', async (req, res) => {
+  try {
+    const { genero } = req.params;
+    const contenidoPorGenero = await contenido.findOne({ where: { genero } });
+    !contenidoPorGenero ? res.status(404).json({error: "Película no encontrada"})
+    :res.status(200).json(contenidoPorGenero)
+  } catch (error) {
+    res.status(500).json({error : "Película no encontrada",description : error.messagge}) 
+  }
+});
+*/
 /*------------------------------------------------------------------------------------------------------*/
 app.listen(3008, function () {
   console.log("Aplicación ejemplo, escuchando el puerto 3008!");

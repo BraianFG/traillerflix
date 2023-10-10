@@ -24,7 +24,8 @@ Teniendo en cuenta que no está la carpeta Node Modules no está en el proyecto 
 * dotenv
 
 ## ANTES DE EJECUTAR EL PROGRAMA 
-Importe y ejecute tablas.sql en Mysql Workbench 
+* Importe y ejecute tablas.sql en Mysql Workbench
+* Cargue el JSON a la base de datos,tabla contenido
 
 ## ¿Cómo usar el programa? 
 

@@ -1,19 +1,19 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../conexion/connection');
 
-const categorias = sequelize.define('categorias', {
-    categoriaID: {
+const generos = sequelize.define('generos', {
+    generoID: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    categoria: {
+    genero: {
         type: DataTypes.STRING,
         allowNull: false,
     },
 }, {
-    tableName: 'categorias',
+    tableName: 'generos',
     timestamps: false,
 });
 
-module.exports = categorias;
+module.exports = generos;

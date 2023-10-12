@@ -11,6 +11,10 @@ const contenido = sequelize.define('contenido', {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    titulo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     categoriaID: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -36,7 +40,7 @@ const contenido = sequelize.define('contenido', {
         allowNull: false,
         default: 0,
       },  
-      triller: {
+      trailer: {
         type: DataTypes.STRING,
         allowNull: false,
         default: 0,
